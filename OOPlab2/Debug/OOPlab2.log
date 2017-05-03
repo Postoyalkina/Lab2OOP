@@ -1,0 +1,14 @@
+﻿  OOPlab2.cpp
+  Generating Code...
+  Compiling...
+  ArrayList.cpp
+  Generating Code...
+ArrayList.obj : error LNK2001: unresolved external symbol "public: virtual bool __thiscall ArrayList::insertAt(int,int)" (?insertAt@ArrayList@@UAE_NHH@Z)
+ArrayList.obj : error LNK2001: unresolved external symbol "public: virtual int __thiscall ArrayList::removeAt(int)" (?removeAt@ArrayList@@UAEHH@Z)
+ArrayList.obj : error LNK2001: unresolved external symbol "public: virtual int __thiscall ArrayList::peek(void)const " (?peek@ArrayList@@UBEHXZ)
+ArrayList.obj : error LNK2019: unresolved external symbol "public: virtual int __thiscall ArrayList::size(void)const " (?size@ArrayList@@UBEHXZ) referenced in function "[thunk]:public: virtual int __thiscall ArrayList::size`vtordisp{4294967292,0}' (void)const " (?size@ArrayList@@$4PPPPPPPM@A@BEHXZ)
+ArrayList.obj : error LNK2019: unresolved external symbol "public: virtual bool __thiscall ArrayList::isEmpty(void)const " (?isEmpty@ArrayList@@UBE_NXZ) referenced in function "[thunk]:public: virtual bool __thiscall ArrayList::isEmpty`vtordisp{4294967292,0}' (void)const " (?isEmpty@ArrayList@@$4PPPPPPPM@A@BE_NXZ)
+ArrayList.obj : error LNK2019: unresolved external symbol "public: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __thiscall ArrayList::toString(void)const " (?toString@ArrayList@@UBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ) referenced in function "[thunk]:public: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __thiscall ArrayList::toString`vtordisp{4294967292,0}' (void)const " (?toString@ArrayList@@$4PPPPPPPM@A@BE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ)
+ArrayList.obj : error LNK2019: unresolved external symbol "public: virtual int __thiscall ArrayList::get(int)const " (?get@ArrayList@@UBEHH@Z) referenced in function "[thunk]:public: virtual int __thiscall ArrayList::get`vtordisp{4294967292,0}' (int)const " (?get@ArrayList@@$4PPPPPPPM@A@BEHH@Z)
+ArrayList.obj : error LNK2019: unresolved external symbol "public: virtual void __thiscall ArrayList::set(int,int)" (?set@ArrayList@@UAEXHH@Z) referenced in function "[thunk]:public: virtual void __thiscall ArrayList::set`vtordisp{4294967292,0}' (int,int)" (?set@ArrayList@@$4PPPPPPPM@A@AEXHH@Z)
+C:\Users\└эрёЄрёш \Documents\╙эштхЁ\2 ъєЁё\OOP\OOPlab2\Debug\OOPlab2.exe : fatal error LNK1120: 8 unresolved externals
