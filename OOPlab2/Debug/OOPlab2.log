@@ -1,17 +1,7 @@
-﻿  stdafx.cpp
-  StaticDeque.cpp
-  StaticArray.cpp
-  Stack.cpp
-  Queue.cpp
-  PushPopContainer.cpp
-  OOPlab2.cpp
-  LinkedList.cpp
-  LinkedDeque.cpp
-  InsertableContainer.cpp
-  IndexedContainer.cpp
-  Deque.cpp
-  Container.cpp
+﻿  StaticArray.cpp
   ArrayList.cpp
   Generating Code...
+  Skipping... (no relevant changes detected)
+  OOPlab2.cpp
   OOPlab2.vcxproj -> C:\Users\Анастасия\Documents\Универ\2 курс\OOP\Lab2\Debug\OOPlab2.exe
   OOPlab2.vcxproj -> C:\Users\Анастасия\Documents\Универ\2 курс\OOP\Lab2\Debug\OOPlab2.pdb (Full PDB)

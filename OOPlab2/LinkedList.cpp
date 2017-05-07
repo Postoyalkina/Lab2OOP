@@ -11,6 +11,12 @@ LinkedList::LinkedList()
 
 LinkedList::~LinkedList()
 {
+	while (head)
+	{
+		Node *ps = head;
+		head = head->p;
+		delete ps;
+	}
 }
 
 LinkedList::LinkedList(int value)

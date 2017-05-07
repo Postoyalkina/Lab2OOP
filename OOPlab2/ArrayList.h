@@ -4,7 +4,7 @@
 class ArrayList: PushPopContainer, InsertableContainer
 {
 private:
-	const int sizOf = 10;
+	const int sizOf = 3;
 	int siz;
 	int *arr;
 public:
