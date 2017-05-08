@@ -6,21 +6,15 @@
 #include "Queue.h"
 #include "LinkedList.h"
 #include "ArrayList.h"
+#include "StaticArray.h"
+#include "StaticDeque.h"
 #include <iostream>
 
 using namespace std;
 
 int main()
 {
-	ArrayList *q = new ArrayList(6);
-	cout << q->toString() << endl;
-	q->pop();
-	q->push(7);
-	cout << q->toString() << endl;
-	q->insertAt(1, 8);
-	cout << q->toString() << endl;
-	q->removeAt(0);
-	cout << q->toString() << endl;
+	StaticDeque *q = new StaticDeque(3,2);
 	system("pause");
     return 0;
 }

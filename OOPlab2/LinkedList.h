@@ -10,7 +10,7 @@ private:
 		Node *p, *n;
 	};
 	Node *head, *tail;
-	int siz = 0;
+	int siz;
 public:
 	LinkedList();
 	LinkedList(int value);
