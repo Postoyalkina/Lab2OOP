@@ -79,21 +79,21 @@ bool LinkedDeque::pushBack(int value)
 
 int LinkedDeque::popFront()
 {
-	siz--;
-	if (isEmpty()) return -1;
+	if (isEmpty()) throw 1;
 	int temp = head->value;
 	Node *ps = head->n;
 	delete head;
 	head = ps;
 	if (head) head->p = NULL;
 	else tail = NULL;
+	siz--;
 	return temp;
 }
 
 int LinkedDeque::popBack()
 {
+	if (isEmpty()) throw 1;
 	int tp;
-	siz--;
 	tp = tail->value;
 	Node *temp = new Node;
 	temp = tail->p;
@@ -101,19 +101,18 @@ int LinkedDeque::popBack()
 	tail = temp;
 	if (isEmpty()) tail = head = 0;
 	else tail->n = NULL;
+	siz--;
 	return tp;
 }
 
 int LinkedDeque::peekFront() const
 {
-	if (isEmpty()) return -1;
-	int temp = head->value;
-	return temp;
+	if (isEmpty()) throw 1;
+	return head->value;
 }
 
 int LinkedDeque::peekBack() const
 {
-	if (isEmpty()) return -1;
-	int temp = tail->value;
-	return temp;
+	if (isEmpty()) throw 1;
+	return tail->value;
 }

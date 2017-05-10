@@ -7,9 +7,9 @@ using namespace std;
 Stack::Stack(int value)
 {
 	top = new(Node); 
-	top->value = value; // ЗАписываем значение
-	top->p = 0; // Адрес ноль, так как это хвост стека - элемент добавленный первым
-	siz = 1; // После выделения памяти и заполянения полей структуры стек стал иметь размер 1
+	top->value = value; 
+	top->p = 0;
+	siz = 1; 
 
 }
 Stack::~Stack()
@@ -20,12 +20,22 @@ Stack::~Stack()
 		top = top->p;
 		delete ps;
 	}
-} 
+}
+
+bool Stack::push(int value)
+{
+	siz++;
+	Node *ps = new Node;
+	ps->value = value;
+	ps->p = top;
+	top = ps;
+	return true;
+}
 
 int Stack::pop()
 {
+	if (isEmpty()) throw 1;
 	siz--;
-	if (isEmpty()) return -1;
 	int temp = top->value;
 	Node *ps = top;
 	top = top->p;
@@ -33,19 +43,15 @@ int Stack::pop()
 	return temp;
 }
 
-bool Stack::push(int value)
+int Stack::peek() const
 {
-	siz++;
-	Node *ps = new Node;
-	ps-> value = value;
-	ps->p = top;
-	top = ps;
-	return true;
+	if (isEmpty()) throw 1;
+	else return top->value;
 }
 
 bool Stack::isEmpty() const
 {
-	if (top == nullptr) return true;
+	if (siz == 0) return true;
 	else return false;
 }
 
@@ -67,11 +73,4 @@ string Stack::toString() const
 	}
 	reverse(str.begin(), str.end());
 	return str;
-}
-
-int Stack::peek() const
-{
-	if (isEmpty()) return -1;
-	int temp = top->value;
-	return temp;
 }

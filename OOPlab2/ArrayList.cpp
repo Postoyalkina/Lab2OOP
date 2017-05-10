@@ -25,6 +25,7 @@ ArrayList::~ArrayList()
 
 int ArrayList::pop()
 {
+	if (isEmpty()) throw 1;
 	int temp = arr[siz];
 	int *tmp = new int[siz - 1];
 	for (int i = 0; i < siz-1; i++)
@@ -49,6 +50,7 @@ bool ArrayList::push(int value)
 
 bool ArrayList::insertAt(int index, int value)
 {
+	if (index > siz) throw 2;
 	int *tmp = new int[siz + 1];
 	int i = 0;
 	while(i!=index)
@@ -70,6 +72,7 @@ bool ArrayList::insertAt(int index, int value)
 
 int ArrayList::removeAt(int index)
 {
+	if (index > siz) throw 2;
 	int *tmp = new int[siz - 1];
 	int i = 0;
 	while (i != index)
@@ -90,6 +93,7 @@ int ArrayList::removeAt(int index)
 
 int ArrayList::peek() const
 {
+	if (isEmpty()) throw 1;
 	return arr[siz-1];
 }
 

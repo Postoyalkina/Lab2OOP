@@ -40,10 +40,12 @@ string StaticArray::toString() const
 
 int StaticArray::get(int index) const
 {
+	if (index > siz) throw 2;
 	return arr[index];
 }
 
 void StaticArray::set(int index, int value)
 {
+	if (index > siz) throw 2;
 	arr[index] = value;
 }

@@ -37,21 +37,24 @@ bool Queue::push(int value)
 
 int Queue::pop()
 {
-	if (isEmpty())
-	{
-		return -1;
-	}
-
-	Node *temp = head; // записываем адрес головы
+	if (isEmpty())	throw 1;
+	int temp = head->value;
+	Node *tmp = head; // записываем адрес головы
 	head = head->p; // изменяем адрес головы
-	delete temp;  // удаляем старую голову
+	delete tmp;  // удаляем старую голову
 	siz--; // уменьшаем размер
-	return 1;
+	return temp;
+}
+
+int Queue::peek() const
+{
+	if (isEmpty()) throw 1;
+	return head->value;
 }
 
 bool Queue::isEmpty() const
 {
-	if (tail == nullptr) return true;
+	if (siz == 0) return true;
 	else return false;
 }
 
@@ -71,13 +74,5 @@ string Queue::toString() const
 		top1 = top1->p;
 		i++;
 	}
-	//reverse(str.begin(), str.end());
 	return str;
-}
-
-int Queue::peek() const
-{
-	if(isEmpty()) return -1;
-	int temp = head->value;
-	return temp;
 }
