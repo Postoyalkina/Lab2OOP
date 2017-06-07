@@ -1,6 +1,6 @@
 #pragma once
 #include "Deque.h"
-class LinkedDeque: Deque
+class LinkedDeque: public Deque
 {
 private:
 	struct Node

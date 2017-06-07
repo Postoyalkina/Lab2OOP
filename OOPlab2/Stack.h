@@ -1,6 +1,6 @@
 #pragma once
 #include "PushPopContainer.h"
-class Stack: PushPopContainer
+class Stack: public PushPopContainer
 {
 private:
 	struct Node
@@ -11,6 +11,7 @@ private:
 	Node *top;
 	int siz;
 public:
+	Stack();
 	Stack(int value);
 	~Stack();
 

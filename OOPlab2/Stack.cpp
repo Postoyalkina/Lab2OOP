@@ -4,6 +4,13 @@
 
 using namespace std;
 
+Stack::Stack()
+{
+	top = NULL;
+	siz = 0;
+
+}
+
 Stack::Stack(int value)
 {
 	top = new(Node); 

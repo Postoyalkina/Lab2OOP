@@ -1,6 +1,6 @@
 #pragma once
 #include "IndexedContainer.h"
-class StaticArray: IndexedContainer
+class StaticArray: public IndexedContainer
 {
 private:
 	int siz;

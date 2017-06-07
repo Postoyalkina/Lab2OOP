@@ -1,7 +1,7 @@
 #pragma once
 #include "PushPopContainer.h"
 #include "InsertableContainer.h"
-class LinkedList: PushPopContainer, InsertableContainer
+class LinkedList: public PushPopContainer, public InsertableContainer
 {
 private:
 	struct Node

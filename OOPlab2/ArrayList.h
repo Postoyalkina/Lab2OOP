@@ -1,7 +1,7 @@
 #pragma once
 #include "PushPopContainer.h"
 #include "InsertableContainer.h"
-class ArrayList: PushPopContainer, InsertableContainer
+class ArrayList: public PushPopContainer, public InsertableContainer
 {
 private:
 	const int sizOf = 3;

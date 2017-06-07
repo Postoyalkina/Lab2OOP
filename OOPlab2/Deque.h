@@ -4,7 +4,7 @@ class Deque:public virtual Container
 {
 public:
 	Deque();
-	~Deque();
+	virtual ~Deque();
 	virtual bool pushFront(int value)=0;
 	virtual bool pushBack(int value)=0;
 	virtual int popFront() = 0;

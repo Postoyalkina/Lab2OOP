@@ -1,6 +1,6 @@
 #pragma once
 #include "Deque.h"
-class StaticDeque: Deque
+class StaticDeque: public Deque
 {
 private:
 	int siz;

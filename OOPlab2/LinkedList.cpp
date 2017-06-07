@@ -118,11 +118,11 @@ string LinkedList::toString() const
 {
 	int i = 0;
 	string str = "";
-	Node *top1 = tail;
+	Node *top1 = head;
 	while (top1)
 	{
 		str += top1->value + 48;
-		top1 = top1->p;
+		top1 = top1->n;
 		i++;
 	}
 	reverse(str.begin(), str.end());

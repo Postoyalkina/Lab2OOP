@@ -1,6 +1,6 @@
 #pragma once
 #include "PushPopContainer.h"
-class Queue: PushPopContainer
+class Queue: public PushPopContainer
 {
 private:
 	struct Node
@@ -12,6 +12,7 @@ private:
 	int siz;
 
 public:
+	Queue();
 	Queue(int value);
 	~Queue();
 

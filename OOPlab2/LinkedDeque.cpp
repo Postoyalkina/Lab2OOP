@@ -42,11 +42,11 @@ string LinkedDeque::toString() const
 {
 	int i = 0;
 	string str = "";
-	Node *top1 = tail;
+	Node *top1 = head;
 	while (top1)
 	{
 		str += top1->value + 48;
-		top1 = top1->p;
+		top1 = top1->n;
 		i++;
 	}
 	reverse(str.begin(), str.end());
@@ -60,6 +60,8 @@ bool LinkedDeque::pushFront(int value)
 	ps->value = value;
 	ps->p = NULL;
 	ps->n = head;
+	if (isEmpty()) tail = ps;
+	else head->p = ps;
 	head = ps;
 	return true;
 }
@@ -99,7 +101,7 @@ int LinkedDeque::popBack()
 	temp = tail->p;
 	delete tail;
 	tail = temp;
-	if (isEmpty()) tail = head = 0;
+	if (isEmpty()) head = NULL;
 	else tail->n = NULL;
 	siz--;
 	return tp;
